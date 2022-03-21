@@ -26,7 +26,6 @@
             <th>Name</th>
             <th>Email</th>
             <th>Contact</th>
-       
             <th width="280px">Action</th>
         </tr>
         @foreach ($employees as $employee)
@@ -35,7 +34,6 @@
                 <td>{{ $employee->name }}</td>
                 <td>{{ $employee->email }}</td>
                 <td>{{ $employee->contact }}</td>
-                <td>{{ date_format($employee->created_at, 'jS M Y') }}</td>
                 <td>
                     <form action="{{ route('employees.destroy', $employee->id) }}" method="POST">
 
