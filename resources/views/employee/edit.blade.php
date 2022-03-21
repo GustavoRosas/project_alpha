@@ -4,11 +4,9 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Product</h2>
+                <h2 style="padding:15px">Edit Product</h2>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('employees.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
-            </div>
+            
         </div>
     </div>
 
@@ -48,8 +46,9 @@
                         value="{{ $employee->contact }}">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary" style="font-size: 15px;color:black;">Submit</button>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-left"  style="padding-bottom:15px">
+                <button type="submit" class="btn btn-success" style="font-size: 15px;color:black;">Submit</button>
+                <a class="btn btn-primary" href="{{ route('employees.index') }}">Return</a>
             </div>
         </div>
 
