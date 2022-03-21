@@ -14,9 +14,9 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employee = Employee::latest()->paginate(5);
+        $employees = Employee::latest()->paginate(5);
 
-        return view('employee.index', compact('employee'))
+        return view('employee.index', compact('employees'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -27,7 +27,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('employee.create');
+        return view('employees.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
-        return view('employee.show', compact('employee'));
+        return view('employees.show', compact('employee'));
     }
 
     /**
@@ -69,7 +69,7 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        return view('employee.edit', compact('employee'));
+        return view('employees.edit', compact('employee'));
     }
 
     /**
@@ -88,7 +88,7 @@ class EmployeeController extends Controller
         ]);
         $employee->update($request->all());
 
-        return redirect()->route('employee.index')
+        return redirect()->route('employees.index')
             ->with('success', 'Employee updated successfully');
     }
 
@@ -102,7 +102,7 @@ class EmployeeController extends Controller
     {
         $employee->delete();
 
-        return redirect()->route('employee.index')
+        return redirect()->route('employees.index')
             ->with('success', 'Employee deleted successfully');
     }
 }

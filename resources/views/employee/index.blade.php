@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 8 CRUD </h2>
+                <h2>Project-Alpha Employees </h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('employee.create') }}" title="Create a employee"> <i class="fas fa-plus-circle"></i>
@@ -23,19 +24,17 @@
         <tr>
             <th>No</th>
             <th>Name</th>
-            <th>Introduction</th>
-            <th>Location</th>
-            <th>Cost</th>
-            <th>Date Created</th>
+            <th>Email</th>
+            <th>Contact</th>
+       
             <th width="280px">Action</th>
         </tr>
         @foreach ($employees as $employee)
             <tr>
                 <td>{{ ++$i }}</td>
                 <td>{{ $employee->name }}</td>
-                <td>{{ $employee->introduction }}</td>
-                <td>{{ $employee->location }}</td>
-                <td>{{ $employee->cost }}</td>
+                <td>{{ $employee->email }}</td>
+                <td>{{ $employee->contact }}</td>
                 <td>{{ date_format($employee->created_at, 'jS M Y') }}</td>
                 <td>
                     <form action="{{ route('employees.destroy', $employee->id) }}" method="POST">

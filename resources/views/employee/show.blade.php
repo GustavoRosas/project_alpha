@@ -4,8 +4,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>  {{ $project->name }}</h2>
+            <div class="pull-left" style="padding:15px">
+                                <h2>  {{ $project->name }}</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('projects.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
@@ -31,6 +31,9 @@
                 <strong>Contact:</strong>
                 {{ $project->contact }}
             </div>
+        </div>
+    </div>
+    </div>
         </div>
     </div>
 @endsection

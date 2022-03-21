@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +22,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/employee/list', function () {
-    return view('list');
-})->name('list');
-
-Route::resource('employee', ProjectController::class);
+Route::resource('employees', EmployeeController::class);
+//Route::middleware(['auth:sanctum', 'verified'])->get('/index', 'EmployeeController@index')->name('employees.index');
+Route::get('/employee/index', 'App\Http\Controllers\EmployeeController@index')->name('employee.index');
+Route::get('/employee/create', 'App\Http\Controllers\EmployeeController@create')->name('employee.create');
+Route::get('/employee/edit', 'App\Http\Controllers\EmployeeController@edit')->name('employee.edit');
+Route::get('/employee/show', 'App\Http\Controllers\EmployeeController@show')->name('employee.show');
