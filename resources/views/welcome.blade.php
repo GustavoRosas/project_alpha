@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Project Alpha</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -55,7 +55,9 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Access the documentation of this project.<br>This project uses the MVC arquiteture and has an API for almost all his content.
+                                    Access the documentation of laravel.<br>
+                                    This project uses the MVC arquiteture and has an API for almost all his content.<br>
+                                    As soon as possible will exist an API for the content of this project.
                                 </div>
                             </div>
                         </div>
