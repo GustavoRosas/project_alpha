@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Employee</h2>
+                <h2 style="padding:15px">Add New Employee</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('employees.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
@@ -45,8 +45,9 @@
                     <input type="text" name="contact" class="form-control" placeholder="(99) 9 9999-9999">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-left"  style="padding-bottom:15px">
+                <button type="submit" class="btn btn-success" style="font-size: 15px;color:black;">Submit</button>
+                <button type="submit" class="btn btn-info" style="font-size: 15px;color:black;">Return</button>
             </div>
         </div>
 

@@ -27,7 +27,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('employees.create');
+        return view('employee.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class EmployeeController extends Controller
 
         Employee::create($request->all());
 
-        return redirect()->route('employee.index')
+        return redirect()->route('employees.index')
             ->with('success', 'Employee created successfully.');
     }
 
@@ -58,7 +58,7 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
-        return view('employees.show', compact('employee'));
+        return view('employee.show', compact('employee'));
     }
 
     /**
@@ -69,7 +69,7 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        return view('employees.edit', compact('employee'));
+        return view('employee.edit', compact('employee'));
     }
 
     /**

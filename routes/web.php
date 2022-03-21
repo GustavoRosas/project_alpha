@@ -22,9 +22,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::get('/employee/index', 'App\Http\Controllers\EmployeeController@index')->name('employees.index');
+Route::get('/employee/create', 'App\Http\Controllers\EmployeeController@create')->name('employees.create');
+Route::get('/employee/edit', 'App\Http\Controllers\EmployeeController@edit')->name('employees.edit');
+Route::get('/employee/show', 'App\Http\Controllers\EmployeeController@show')->name('employees.show');
+
 Route::resource('employees', EmployeeController::class);
-//Route::middleware(['auth:sanctum', 'verified'])->get('/index', 'EmployeeController@index')->name('employees.index');
-Route::get('/employee/index', 'App\Http\Controllers\EmployeeController@index')->name('employee.index');
-Route::get('/employee/create', 'App\Http\Controllers\EmployeeController@create')->name('employee.create');
-Route::get('/employee/edit', 'App\Http\Controllers\EmployeeController@edit')->name('employee.edit');
-Route::get('/employee/show', 'App\Http\Controllers\EmployeeController@show')->name('employee.show');

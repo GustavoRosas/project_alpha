@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Project-Alpha Employees </h2>
+                <h2 style="padding:15px">Project-Alpha Employees </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('employee.create') }}" title="Create a employee"> <i class="fas fa-plus-circle"></i>
+                <a class="btn btn-success" href="{{ route('employees.create') }}" title="Create a employee" style="padding:15px"> <i class="fas fa-plus-circle"></i>
                     </a>
             </div>
         </div>
