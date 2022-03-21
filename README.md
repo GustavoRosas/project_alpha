@@ -18,13 +18,16 @@ You can access a deploy of this project on: [Project-Alpha](http://project-gusta
 
 First of all, if you don't have php and MySQL installed, do this:
 
-Access and install XAMPP, to install php, MySQL and Apache dependencies
+Access and install XAMPP, to install php, MySQL and Apache dependencies. 
+In the instalation it's highly recommended that you set to include the environment variables automatically.
 
 - [Xampp](https://www.apachefriends.org/index.html)
 
+After this, open up Xampp Control Pannel and start Apache and MySql modules.
 
-In the instalation it's highly recommended that you include the environment variables automatically.
- But if you forgot to do that, let's manually include it on your Environment Variables.
+
+
+If you forgot to add the variables into your environment variables, let's manually do it.
 Search for Environment variables in your Operation System and enter it.
 - Click on "Environment variables...";
 - Click on the row that has the variable value as "path" and click "Edit...";
